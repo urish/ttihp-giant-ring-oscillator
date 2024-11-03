@@ -16,7 +16,7 @@ module tt_um_urish_giant_ringosc (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  parameter CHAIN_LENGTH = 3899;
+  parameter CHAIN_LENGTH = 3889;
 
   wire [CHAIN_LENGTH-1:0] inv_in;
   wire [CHAIN_LENGTH-1:0] inv_out;
@@ -39,7 +39,7 @@ module tt_um_urish_giant_ringosc (
   assign uio_out[2] = inv_out[1000];
   assign uio_out[3] = inv_out[2000];
   assign uio_out[4] = inv_out[3000];
-  assign uio_out[5] = inv_out[3898];
+  assign uio_out[5] = inv_out[3888];
   assign uio_out[7:6] = 2'b0;
 
   inverter inv[CHAIN_LENGTH-1:0] (
