@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "Giant Ring Oscillator"      # Project title
+  title:        "Giant Ring Oscillator (1001)"      # Project title
   author:       "Uri Shaked"      # Your name
   discord:      "urish"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Configurable ring oscillator with up to 1001 stages"      # One line description of what your project does
+  description:  "Configurable ring oscillator with up to 1001 inverters"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
