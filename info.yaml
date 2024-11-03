@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "Giant Ring Oscillator (3999 inverters)"      # Project title
+  title:        "Giant Ring Oscillator (3899 inverters)"      # Project title
   author:       "Uri Shaked"      # Your name
   discord:      "urish"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Configurable ring oscillator with up to 3999 inverters"      # One line description of what your project does
+  description:  "Configurable ring oscillator with up to 3899 inverters"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -48,7 +48,7 @@ pinout:
   uio[2]: "len1001"
   uio[3]: "len2001"
   uio[4]: "len3001"
-  uio[5]: "len3999"
+  uio[5]: "len3899"
   uio[6]: ""
   uio[7]: ""
 

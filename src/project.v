@@ -16,7 +16,7 @@ module tt_um_urish_giant_ringosc (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  parameter CHAIN_LENGTH = 3999;
+  parameter CHAIN_LENGTH = 3899;
 
   wire [CHAIN_LENGTH-1:0] inv_in;
   wire [CHAIN_LENGTH-1:0] inv_out;
@@ -39,38 +39,13 @@ module tt_um_urish_giant_ringosc (
   assign uio_out[2] = inv_out[1000];
   assign uio_out[3] = inv_out[2000];
   assign uio_out[4] = inv_out[3000];
-  assign uio_out[5] = inv_out[3998];
+  assign uio_out[5] = inv_out[3898];
   assign uio_out[7:6] = 2'b0;
 
-  genvar i;
-  generate
-    // Yosys fails with "Loop unrolling took too long" error if there are more than 1024 loop iterations,
-    // so we split the generate block into several loops:
-    for (i = 0; i < 1000; i = i + 1) begin : inv0k
-      inverter inv (
-          .in (inv_in[i]),
-          .out(inv_out[i])
-      );
-    end
-    for (i = 1000; i < 2000; i = i + 1) begin : inv1k
-      inverter inv (
-          .in (inv_in[i]),
-          .out(inv_out[i])
-      );
-    end
-    for (i = 2000; i < 3000; i = i + 1) begin : inv2k
-      inverter inv (
-          .in (inv_in[i]),
-          .out(inv_out[i])
-      );
-    end
-    for (i = 3000; i < CHAIN_LENGTH; i = i + 1) begin : inv3k
-      inverter inv (
-          .in (inv_in[i]),
-          .out(inv_out[i])
-      );
-    end
-  endgenerate
+  inverter inv[CHAIN_LENGTH-1:0] (
+      .in (inv_in),
+      .out(inv_out)
+  );
 
   wire _unused = &{ena, clk, rst_n};
 
