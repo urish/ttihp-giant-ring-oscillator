@@ -11,17 +11,17 @@
 
   "//": "Here are some of the variables you may want to change:",
 
-  "PLACE_DENSITY": 0.99,
+  "PLACE_DENSITY": 0.94,
   "TNS_END_PERCENT": 100,
 
   "//": "Change the clock period here. 20000 ps = 20 ns corresponds to 50 MHz",
-  "ABC_CLOCK_PERIOD_IN_PS": 20000,
+  "ABC_CLOCK_PERIOD_IN_PS": 1000000,
 
   "//": "Increase this if you are getting 'Synthesized memory size exceeds maximum allowed bits' error:",
   "SYNTH_MEMORY_MAX_BITS": 4096,
 
   "//": "Setting to 1 may help decrease design area utilization / speed up routing:",
-  "ABC_AREA": 0,
+  "ABC_AREA": 1,
 
   "//": "Configuration docs: https://openroad-flow-scripts.readthedocs.io/en/latest/user/FlowVariables.html",
 
