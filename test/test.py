@@ -33,7 +33,7 @@ async def test_project(dut):
 
     # We expect all the inverter outputs to be 1
     assert dut.uo_out.value == 0xff
-    assert dut.uio_out.value & 0x07 == 0x07
+    assert dut.uio_out.value & 0x3f == 0x3f
 
     # Test for input 1
     dut.ui_in.value = 1
@@ -43,4 +43,4 @@ async def test_project(dut):
 
     # We expect all the inverter outputs to be 1
     assert dut.uo_out.value == 0x00
-    assert dut.uio_out.value & 0x07 == 0x00
+    assert dut.uio_out.value & 0x3f == 0x00

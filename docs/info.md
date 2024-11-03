@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-A giant, configurable ring oscillator with up to 1001 stages. To enable the ring oscillator, connect one of the output pins to the first input pin (`ring_in` / `ui_in[0]`). Each output pin is connected at a different point in the ring oscillator chain, making it possible to create rings of different lengths:
+A giant, configurable ring oscillator with up to 3999 stages. To enable the ring oscillator, connect one of the output pins to the first input pin (`ring_in` / `ui_in[0]`). Each output pin is connected at a different point in the ring oscillator chain, making it possible to create rings of different lengths:
 
 | Pin    | Chain length |
 |--------|--------------|
@@ -24,10 +24,13 @@ A giant, configurable ring oscillator with up to 1001 stages. To enable the ring
 | uio[0] | 201          |
 | uio[1] | 501          |
 | uio[2] | 1001         |
+| uio[3] | 2001         |
+| uio[4] | 3001         |
+| uio[5] | 3999         |
 
 ## How to test
 
-Connect one of the output pins (e.g. `uio_out[2]`) to `ring_in`, and measure the output frequency.
+Connect one of the output pins (e.g. `uio_out[5]`) to `ring_in`, and measure the output frequency.
 
 ## External hardware
 
